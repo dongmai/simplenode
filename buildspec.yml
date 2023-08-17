@@ -28,5 +28,5 @@ phases:
 
 artifacts:
   files: 
-    - appspect.yml  
+    - appspect.yaml  
     - 'deploy/*'
