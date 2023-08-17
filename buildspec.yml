@@ -31,7 +31,6 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
 artifacts:
-  files: imagedefinitions.json
-  >> 
-    deploy/*
-    appspect.yml
+  files: 
+    - appspect.yml
+    - 'deploy/*'
