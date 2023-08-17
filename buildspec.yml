@@ -10,21 +10,21 @@ phases:
   #   runtime-versions:
   #     docker: latest
 
-  # pre_build:
-  #   commands:
-  #     - echo Logging in to Amazon ECR...
-  #     - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 295899798296.dkr.ecr.us-east-1.amazonaws.com
-  # build:
-  #   commands:
-  #     - echo Build started on `date`
-  #     - echo Building the Docker image...          
-  #     - docker build -t simplenode:latest .
-  #     - docker tag simplenode:latest 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
-  # post_build:
-  #   commands:
-  #     - echo Build completed on `date`
-  #     - echo Pushing the Docker image...
-  #     - docker push 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 295899798296.dkr.ecr.us-east-1.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      # - docker build -t simplenode:latest .
+      # - docker tag simplenode:latest 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      # - docker push 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
 
 artifacts:
   files: 
