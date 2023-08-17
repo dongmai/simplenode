@@ -5,6 +5,6 @@ files:
     destination: /home/ubuntu/simplenode
 hooks:
   ApplicationStart:
-    - location: scripts/app_start.sh
+    - location: ./deploy/scripts/app_start.sh
       timeout: 300
       runas: root
