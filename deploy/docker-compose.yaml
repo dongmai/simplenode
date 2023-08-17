@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  simplenode:
+    image: 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    tty: true

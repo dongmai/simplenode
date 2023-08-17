@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  simplenode:
+    build:
+      context: .
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./src:/usr/src/app
+    tty: true
