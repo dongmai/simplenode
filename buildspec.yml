@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t simplenode .
+      - docker build -t simplenode:latest .
       - docker tag simplenode:latest 295899798296.dkr.ecr.us-east-1.amazonaws.com/simplenode:latest
   post_build:
     commands:
