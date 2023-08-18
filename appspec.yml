@@ -4,6 +4,18 @@ files:
   - source: /
     destination: /home/ubuntu/simplenode
 hooks:
+  BeforeInstall:
+    - location: ./deploy/scripts/before_install.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: ./deploy/scripts/after_install.sh
+      timeout: 10
+      runas: root
+  ApplicationStop:
+    - location: ./deploy/scripts/stop.sh
+      timeout: 20
+      runas: root
   ApplicationStart:
     - location: ./deploy/scripts/app_start.sh
       timeout: 300

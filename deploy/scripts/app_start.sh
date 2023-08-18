@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd deploy
+cd /home/ubuntu/simplenode/deploy
 docker-compose up -d
