@@ -30,3 +30,4 @@ artifacts:
   files: 
     - appspec.yml  
     - deploy/*
+    - deploy/scripts/*
